@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#98589E">
+  <div class="container">
+    <h2 align="center"> Customer Survey Form</h2>
+    <hr>
+    <form id="surveyForm" onsubmit="submitForm(); return false;">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" required>
+      </div>
+      <div class="form-group" align="left">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" required>
+          <option value="" disabled selected>Select Country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <option value="India">India</option>
+          <!-- Add more countries as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Review</label><hr><br>
+        <h3>How Satisfied are you with our Product</h3>
+        <input type="checkbox" id="Satisfied" name="review" value="Satisfied">
+        <label for="Satisfied">Satisfied</label><br>
+        <input type="checkbox" id="Unsatisfied" name="review" value="Unsatisfied">
+        <label for="Unsatisfied" align="left">Unsatisfied</label><br>
+      </div>
+      <div class="form-group">
+        <label for="Is this first time You are using our product">Is this first time You are using our product</label>
+        <input type="text" id="profession" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" required>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+    <hr>
+    <h2 align="center">@2023 Customer Survey From</h2>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Survey Form Submission</h2>
+      <div id="popupContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
